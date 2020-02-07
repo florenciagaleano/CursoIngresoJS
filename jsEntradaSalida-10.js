@@ -10,12 +10,17 @@ function mostrarAumento()
 
 	importe=document.getElementById('importe').value;
 	importe=parseInt(importe);
+	console.log("Importe: "+importe);
 
 	descuento=importe*25/100;
 	descuento=parseInt(descuento);
+	console.log("Descuento: "+descuento);
 
 	resultado=importe-descuento;
+	resultado=parseInt(resultado);
+	console.log("Resultado: "+resultado);
 	document.getElementById('resultado').value=resultado;
+
 
 
 
