@@ -26,8 +26,10 @@ function Sumar ()
 
 	suma=precioUno+precioDos+precioTres;
 	suma=parseInt(suma);
-	alert("La suma es "+suma);
 	console.log("la suma es "+suma);
+	
+	alert("La suma es "+suma);
+	
 	//cuando dice mostrar por console o por alert??
 
 
@@ -75,9 +77,11 @@ function PrecioFinal ()
 	precioTres=parseInt(precioTres);
 
 	precioFinal=precioUno+precioDos+precioTres;
+	precioFinal=parseInt(precioFinal);
 	//es necesario esta var??
 
 	precioFinalIVA=precioFinal+precioFinal*21/100;
+	precioFinalIVA=parseInt(precioFinalIVA);
 
 	alert("El precio con IVA es "+precioFinalIVA);
 
