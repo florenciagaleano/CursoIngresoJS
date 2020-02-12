@@ -70,16 +70,15 @@ function CalcularPrecio ()
 						{
 							descuento=5;
 						}
+
 					}
+				}else
+				{
+					descuento=0;
 				}
 			}
 		}
 	}
-	
-
-
-	
-
 	
 	precioFinal=precio-precio*descuento/100;	
 	document.getElementById('precioDescuento').value=precioFinal;
