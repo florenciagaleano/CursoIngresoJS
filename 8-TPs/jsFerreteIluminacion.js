@@ -12,98 +12,54 @@ function CalcularPrecio ()
 {
 	var cantidadLamparas;
 	var marca;
+	var precioCadaUna;
 	var precio;
-	var descuentoCincuenta;
-	var descuentoCuarenta;
-	var descuentoTreinta;
-	var descuentoVeinticinco;
-	var descuentoVeinte;
-	var descuentoQuince;
-	var descuentoDiez;
-	var descuentoCinco;
-	var iibb;
+	var descuento;
 	var precioFinal;
 
 	cantidadLamparas=document.getElementById('Cantidad').value;
 	cantidadLamparas=parseInt(cantidadLamparas);
-
 	marca=document.getElementById('Marca').value;
-
-	precio=cantidadLamparas*35;
-
-	descuentoCincuenta=precio*50/100;
-	descuentoCuarenta=precio*40/100;
-	descuentoTreinta=precio*30/100;
-	descuentoVeinticinco=precio*25/100;
-	descuentoVeinte=precio*20/100;
-	descuentoQuince=precio*15/100;
-	descuentoDiez=precio*10/100;
-	descuentoCinco=precio*5/100;
-	iibb=precio*10/100;
+	precioCadaUna=35;
+	precio=cantidadLamparas*precioCadaUna;
 
 	if(cantidadLamparas>5)
 	{
-		precioFinal=precio-descuentoCincuenta;
-		
-	}//termina else if punto a
-	else
+		descuento=50;
+	}else
 	{
-		if(cantidadLamparas==5 && marca=="ArgentinaLuz")
+		if(cantidadLamparas==5)
 		{
-			precioFinal=precio-descuentoCuarenta;
-		}//termina else if punto b
-		else
+			if(marca=="ArgentinaLuz")
+			{
+				descuento=40;
+			}else
+			{
+				descuento=30;
+			}
+		}else
 		{
-			if(cantidadLamparas==5 && marca != "ArgentinaLuz")
+			if (cantidadLamparas==4)
 			{
-				precioFinal=precio-descuentoTreinta;
-			}//termina else if punto b(2)
-			else
-			{
-				if(cantidadLamparas==4 && marca =="ArgentinaLuz"||cantidadLamparas==4 && marca=="FelipeLamparas")
+				if(marca=="ArgentinaLuz"||marca=="FelipeLamparas")
 				{
-					precioFinal=precio-descuentoVeinticinco;
-				}//termina else if punto c(1)
-				else
+					descuento=25
+				}else
 				{
-					if(cantidadLamparas==4 && marca !="ArgentinaLuz"||cantidadLamparas==4 && marca !="FelipeLamparas")
-					{
-						precioFinal=precio-descuentoVeinte;
-					}//termina if else punto c(2)
-					else
-					{
-						if(cantidadLamparas==3 && marca == "ArgentinaLuz")
-						{
-							precioFinal=precio-descuentoQuince;
-						}//termina else if punto d(1)
-						else
-						{
-							if(cantidadLamparas==3 && marca=="FelipeLamparas")
-							{
-								precioFinal=precio-descuentoDiez;
-							}//termina else if punto d(2)
-							else
-							{
-								if (cantidadLamparas==3 &&marca!="ArgentinaLuz" ||cantidadLamparas==3 &&marca!="FelipeLamparas")//esta bien esto?
-								{
-									precioFinal=precio-descuentoCinco;
-								}//termina else if punto d(3)
-								else
-								{
-									precioFinal=precio;
-								}
-							}
-						}
-					}
+					descuento=20
 				}
+			}
 				
 			}
 		}
-
 	}
-		
+
+
+	
+
+	
+	precioFinal=precio-precio*descuento/100;	
 	document.getElementById('precioDescuento').value=precioFinal;
-	precioFinal=document.getElementById('precioDescuento').value;
 
 	//preguntar como hacer el E
 }
