@@ -21,6 +21,7 @@ function CalcularPrecio ()
 	var precioCadaUna;
 	var precio;
 	var descuento;
+	var iibb;
 	var precioFinal;
 
 	cantidadLamparas=document.getElementById('Cantidad').value;
@@ -68,12 +69,12 @@ function CalcularPrecio ()
 			{
 				if (marca=="FelipeLamparas")
 				{
-<<<<<<< HEAD
+
 					descuento=10;
 				}else
 				{
 					descuento=5;
-=======
+
 					if(marca=="ArgentinaLuz")
 					{
 						descuento=15;
@@ -91,7 +92,7 @@ function CalcularPrecio ()
 				}else
 				{
 					descuento=0;
->>>>>>> 7509458615957398dfa6dd124e2a0838b8267dbf
+
 				}
 			}
 		}
@@ -99,12 +100,14 @@ function CalcularPrecio ()
 	{
 		descuento=0;
 	}
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 7509458615957398dfa6dd124e2a0838b8267dbf
-	precioFinal=precio-precio*descuento/100;	
+	precioFinal=precio-precio*descuento/100;
+	iibb=precioFinal*10/100;
+
+	if (precioFinal>120)
+	{
+		precioFinal+iibb;
+	}
 	document.getElementById('precioDescuento').value=precioFinal;
 
 	//preguntar como hacer el E
