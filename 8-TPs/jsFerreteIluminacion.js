@@ -89,10 +89,6 @@ function CalcularPrecio ()
 						}
 
 					}
-				}else
-				{
-					descuento=0;
-
 				}
 			}
 		}
