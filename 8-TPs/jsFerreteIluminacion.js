@@ -38,7 +38,7 @@ function CalcularPrecio ()
 	{
 		if (cantidadLamparas==5)
 		{
-			if (marca=="ArgentinaLuz")
+			if(marca=="ArgentinaLuz")
 			{
 				descuento=40;
 			}else
@@ -50,7 +50,7 @@ function CalcularPrecio ()
 	{
 		if (cantidadLamparas==4)
 		{
-			if (marca=="ArgentinaLuz"||marca=="FelipeLamparas")
+			if(marca=="ArgentinaLuz"||marca=="FelipeLamparas")
 			{
 				descuento=25;
 			}else
@@ -60,35 +60,19 @@ function CalcularPrecio ()
 		}
 	}else
 	{
-		if (cantidadLamparas==3)
+		if(cantidadLamparas==3)
 		{
-			if (marca=="ArgentinaLuz")
+			if(marca=="ArgentinaLuz")
 			{
 				descuento=15;
 			}else
 			{
-				if (marca=="FelipeLamparas")
+				if(marca=="FelipeLamparas")
 				{
-
 					descuento=10;
 				}else
 				{
 					descuento=5;
-
-					if(marca=="ArgentinaLuz")
-					{
-						descuento=15;
-					}else
-					{
-						if(marca=="FelipeLamparas")
-						{
-							descuento=10;
-						}else
-						{
-							descuento=5;
-						}
-
-					}
 				}
 			}
 		}
@@ -97,6 +81,7 @@ function CalcularPrecio ()
 		descuento=0;
 	}
 
+	
 	precioFinal=precio-precio*descuento/100;
 	iibb=precioFinal*10/100;
 
