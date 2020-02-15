@@ -27,12 +27,12 @@ function mostrar()
 		{
 			resultado=numeroUno-numeroDos;
 			alert("El resultado es "+resultado);
-		}else
+		}
+	}else
 		{
 			resultado=numeroUno+numeroDos;
 			alert("El resultado es "+resultado);
 		}
-	}
 
 	if (resultado>10)
 	{
