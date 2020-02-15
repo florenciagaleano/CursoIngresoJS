@@ -44,7 +44,7 @@ function CalcularPrecio ()
 			{
 				descuento=30;
 			}
-		}else
+		}else//termina 5 lamparas
 		{
 			if (cantidadLamparas==4)
 			{
@@ -55,7 +55,7 @@ function CalcularPrecio ()
 				{
 					descuento=30;
 				}
-			}else
+			}else//termina 4 lamparas
 			{
 				if (cantidadLamparas==3)
 				{
@@ -72,7 +72,7 @@ function CalcularPrecio ()
 							descuento=5;
 						}
 					}
-				}else
+				}else//termina 3 lamparas
 				{
 					descuento=0;
 				}
