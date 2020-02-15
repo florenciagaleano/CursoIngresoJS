@@ -89,6 +89,4 @@ function CalcularPrecio ()
 		alert("Usted pagó $ "+iibb+" de ingresos brutos");
 	}
 	document.getElementById('precioDescuento').value=precioFinal;
-
-	//preguntar como hacer el E
 }

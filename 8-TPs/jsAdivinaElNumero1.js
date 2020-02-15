@@ -34,7 +34,7 @@ function verificar()
 	if (numeroIngresado>numeroSecreto)
 	{
 		alert ("Te pasaste");
-		contadorIntentos=contadorIntentos+1;
+		contadorIntentos=(contadorIntentos+1);
 	}else
 	{
 		if (numeroIngresado==numeroSecreto)
@@ -43,7 +43,7 @@ function verificar()
 		}else
 		{
 			alert ("Te falta un poco");
-			contadorIntentos=contadorIntentos+1;
+			contadorIntentos=(contadorIntentos+1);
 		}
 	}
 
