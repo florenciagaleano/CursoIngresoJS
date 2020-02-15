@@ -14,5 +14,48 @@ function mostrar()
 	numeroUno=prompt("Ingrese un número");
 	numeroDos=prompt("Ingrese otro número");
 
+	/*if(numeroUno==numeroDos)
+	{
+		resultado=numeroUno+numeroDos;
+		alert("El resultado es "+resultado);
+	}else
+	{
+		if (numeroUno>numeroDos)
+		{
+			parseInt(numeroUno);
+			parseInt(numeroDos);
+			resultado=numeroUno-numeroDos;
+			alert("El resultado es "+resultado);
+		}else
+		{
+			parseInt(numeroUno);
+			parseInt(numeroDos);
+			resultado=numeroUno+numeroDos
+			alert("El resultado es "+resultado);
+		}
+	}*/
+	if (numeroUno==numeroDos)
+	{
+		resultado=numeroUno+numeroDos;
+		alert("El resultado es "+resultado);
+	}else
+	{
+		numeroUno=parseInt(numeroUno);
+		numeroDos=parseInt(numeroDos);
+	}
 
+	if(numeroUno>numeroDos)
+	{
+		resultado=numeroUno-numeroDos;
+		alert("El resultado es "+resultado);
+	}else
+	{
+		resultado=numeroUno+numeroDos;
+		alert("El resultado es "+resultado);
+	}
+
+	if (resultado>10)
+	{
+		alert("El resultado es "+resultado+" y te pasaste de 10");
+	}
 }

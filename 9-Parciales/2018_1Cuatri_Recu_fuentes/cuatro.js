@@ -10,21 +10,25 @@ function mostrar()
 	if(numeroUno==numeroDos)
 	{
 		resultado=numeroUno+numeroDos;
-		alert("El resultado es "+resultado);
-		console.log(resultado);
-	}else if (numeroUno<numeroDos)
-	{
-		parseInt(numeroUno);
-		parseInt(numeroDos);
-		resultado=numeroUno+numeroDos;
-		alert("El resultado es "+resultado);
+		alert(resultado);
 		console.log(resultado);
 	}else
 	{
-		parseInt(numeroUno);
-		parseInt(numeroDos);
-		resultado=numeroUno-numeroDos;
-		console.log(resultado);
+		if (numeroUno>numeroDos)
+		{
+			numeroUno=parseInt(numeroUno);
+			numeroDos=parseInt(numeroDos);
+			resultado=numeroUno-numeroDos;
+			alert(resultado);
+			console.log(resultado);
+		}else
+		{
+			numeroUno=parseInt(numeroUno);
+			numeroDos=parseInt(numeroDos);
+			resultado=numeroUno+numeroDos;
+			alert(resultado);
+			console.log(resultado);
+		}
 	}
 
 }

@@ -18,7 +18,7 @@ function comenzar()
 	numeroSecreto=Math.floor(Math.random() * 100)+1;
 	numeroSecreto=parseInt(numeroSecreto);
 
-			//alert(numeroSecreto );
+	//alert(numeroSecreto );
 	alert("Ya se generó su número secreto");
 	
 
@@ -29,8 +29,7 @@ function verificar()
 	numeroIngresado=document.getElementById('numero').value;
 	numeroIngresado=parseInt(numeroIngresado);
 	console.log (numeroSecreto);
-
-	contadorIntentos=document.getElementById('intentos').value;
+	contadorIntentos=0;
 
 	if (numeroIngresado>numeroSecreto)
 	{
@@ -47,5 +46,9 @@ function verificar()
 			contadorIntentos=contadorIntentos+1;
 		}
 	}
+
+	document.getElementById('intentos').value=contadorIntentos;
+	//no me sale lo de los intentos
+
 	
 }
