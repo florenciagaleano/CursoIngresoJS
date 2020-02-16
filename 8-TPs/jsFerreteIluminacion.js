@@ -29,6 +29,7 @@ function CalcularPrecio ()
 	marca=document.getElementById('Marca').value;
 	precioCadaUna=35;
 	precio=cantidadLamparas*precioCadaUna;
+	descuento=0;
 
 	if(cantidadLamparas>5)
 	{
@@ -72,9 +73,6 @@ function CalcularPrecio ()
 							descuento=5;
 						}
 					}
-				}else//termina 3 lamparas
-				{
-					descuento=0;
 				}
 			}
 		}
