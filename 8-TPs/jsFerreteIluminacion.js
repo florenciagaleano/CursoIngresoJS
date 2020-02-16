@@ -53,7 +53,7 @@ function CalcularPrecio ()
 					descuento=25;
 				}else
 				{
-					descuento=30;
+					descuento=20;
 				}
 			}else//termina 4 lamparas
 			{
@@ -85,7 +85,7 @@ function CalcularPrecio ()
 
 	if (precioFinal>120)
 	{
-		precioFinal+iibb;
+		precioFinal=precioFinal+iibb;
 		alert("Usted pagó $ "+iibb+" de ingresos brutos");
 	}
 	document.getElementById('precioDescuento').value=precioFinal;
