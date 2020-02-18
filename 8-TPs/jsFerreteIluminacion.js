@@ -40,6 +40,7 @@ function CalcularPrecio ()
 				break;
 				default:
 				descuento=30;
+				break;
 			}
 			break;
 
@@ -50,8 +51,10 @@ function CalcularPrecio ()
 				case "ArgentinaLuz":
 				case "FelipeLamparas":
 				descuento=25;
+				break;
 				default:
 				descuento=20;
+				break;
 			}
 			break;
 
@@ -60,12 +63,16 @@ function CalcularPrecio ()
 			{
 				case "ArgentinaLuz":
 				descuento=15;
-				case:"FelipeLamparas"
+				break;
+				case"FelipeLamparas":
 				descuento=10;
+				break;
 				default:
 				descuento=5;
+				break;
 			}
 			break;
+
 		case 1:
 		case 2:
 			descuento=0;
