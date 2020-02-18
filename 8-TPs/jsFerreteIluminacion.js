@@ -16,75 +16,70 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un
  */
 function CalcularPrecio () 
 {
-	var cantidadLamparas;
+	var cantidadDeLamparas;
 	var marca;
-	var precioCadaUna;
-	var precio;
+	var precioBruto;
 	var descuento;
-	var iibb;
-	var precioFinal;
+	var precioConDescuento;
 
-	cantidadLamparas=document.getElementById('Cantidad').value;
-	cantidadLamparas=parseInt(cantidadLamparas);
+	cantidadDeLamparas=document.getElementById('Cantidad').value;
+	cantidadDeLamparas=parseInt(cantidadDeLamparas);
 	marca=document.getElementById('Marca').value;
-	precioCadaUna=35;
-	precio=cantidadLamparas*precioCadaUna;
+	precioBruto=cantidadDeLamparas*35;
+	console.info("Precio bruto: ",precioBruto);
 	descuento=0;
 
-	if(cantidadLamparas>5)
+	switch(cantidadDeLamparas)//case todos al mismo nivel y los break a la misma altura del codigo
 	{
-		descuento=50;
-	}else
-	{
-		if (cantidadLamparas==5)
-		{
-			if (marca=="ArgentinaLuz")
+		case 5:
+
+			switch(marca)
 			{
+				case "ArgentinaLuz":
 				descuento=40;
-			}else
-			{
+				break;
+				default:
 				descuento=30;
 			}
-		}else//termina 5 lamparas
-		{
-			if (cantidadLamparas==4)
-			{
-				if (marca=="ArgentinaLuz"||marca=="FelipeLamparas")
-				{
-					descuento=25;
-				}else
-				{
-					descuento=20;
-				}
-			}else//termina 4 lamparas
-			{
-				if (cantidadLamparas==3)
-				{
-					if (marca=="ArgentinaLuz")
-					{
-						descuento=15;
-					}else
-					{
-						if (marca=="FelipeLamparas")
-						{
-							descuento=10;
-						}else
-						{
-							descuento=5;
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	precioFinal=precio-precio*descuento/100;
-	iibb=precioFinal*10/100;
+			break;
 
-	if (precioFinal>120)
-	{
-		precioFinal=precioFinal+iibb;
-		alert("Usted pagó $ "+iibb+" de ingresos brutos");
-	}
-	document.getElementById('precioDescuento').value=precioFinal;
+		case 4:
+
+			switch(marca)
+			{
+				case "ArgentinaLuz":
+				case "FelipeLamparas":
+				descuento=25;
+				default:
+				descuento=20;
+			}
+			break;
+
+		case 3:
+			switch(marca)
+			{
+				case "ArgentinaLuz":
+				descuento=15;
+				case:"FelipeLamparas"
+				descuento=10;
+				default:
+				descuento=5;
+			}
+			break;
+		case 1:
+		case 2:
+			descuento=0;
+			break;
+		default://es el resto como el else en el if
+			descuento=50;
+			break;
+
+	}//switch usa menos microprocesador. Lo de mayor a 5 NO SE PONE EN EL SWITCH NO SE PONEN CONDICIONES	
+
+	
+	precioConDescuento=precioBruto-precioBruto*descuento/100;//fijarme pq no me anda
+	console.info("Precio con descuento: ",precioConDescuento);
+	document.getElementById('precioDescuento').value=precioConDescuento;
+
+
 }
