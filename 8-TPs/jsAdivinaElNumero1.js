@@ -11,9 +11,6 @@ var numeroSecreto;
 var numeroIngresado; 
 var contadorIntentos;
 
-var numeroSecreto; 
-var numeroIngresado;
-var contadorIntentos;
 
 function comenzar()
 {
