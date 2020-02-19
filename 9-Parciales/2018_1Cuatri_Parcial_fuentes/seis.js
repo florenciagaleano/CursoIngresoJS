@@ -1,8 +1,10 @@
 function mostrar()
 {
 	var hora;
+	
 	hora=document.getElementById('laHora').value;
 	hora=parseInt(hora);
+	//el alert tendría que estar escrito una sola vez
 
 	switch(hora)
 	{

@@ -2,13 +2,13 @@ function mostrar()
 {
 	alert('iteración while');
 
-	var numero;
-	numero=10;
+	var contador;
+	contador=10;
 
-	while(numero>0)
+	while(contador>0)
 	{
-		console.info("Número: ",numero);
-		numero=numero-1;
+		console.info("Número: ",contador);
+		contador=contador-1;
 	}
 
 
