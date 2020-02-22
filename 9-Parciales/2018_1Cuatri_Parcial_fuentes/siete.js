@@ -26,17 +26,18 @@ function mostrar()
 		{
 			sexo=prompt("Reingrese f o m");
 		}
-		
+
+
+		if(sexo=="m"&&notas>5)//anda mal
+		{
+			varonesConSeis=varonesConSeis+1;
+		}		
 		contador=contador+1;
 
 	}//termina while contador
 
-	if(sexo=="m"&&notas>5)
-	{
-		varonesConSeis=varonesConSeis+1;
-		alert("La cantidad de varones con seis es de "+varonesConSeis);
-	}
 	promedio=acumuladorNotas/contador;
 	alert("El promedio de las notas es "+promedio);
+	alert("La cantidad de varones con seis es de "+varonesConSeis);
 
 }
