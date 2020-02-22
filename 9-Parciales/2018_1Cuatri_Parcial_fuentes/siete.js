@@ -4,10 +4,12 @@ function mostrar()
 	var notas;
 	var acumuladorNotas;
 	var sexo;
+	var varonesConSeis;
 	var promedio;
 
 	contador=0;
 	acumuladorNotas=0;
+	varonesConSeis=0;
 
 	while(contador<5)
 	{
@@ -29,6 +31,11 @@ function mostrar()
 
 	}//termina while contador
 
+	if(sexo=="m"&&notas>5)
+	{
+		varonesConSeis=varonesConSeis+1;
+		alert("La cantidad de varones con seis es de "+varonesConSeis);
+	}
 	promedio=acumuladorNotas/contador;
 	alert("El promedio de las notas es "+promedio);
 
