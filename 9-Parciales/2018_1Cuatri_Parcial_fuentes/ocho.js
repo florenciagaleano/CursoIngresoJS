@@ -19,6 +19,8 @@ function mostrar()
 	ceros=0;
 	sumaNegativos=0;
 	acumuladorPositivos=0;
+	numerosPares=0;
+	numerosImpares=0;
 	respuesta="si";
 
 	while(respuesta=="si")
@@ -31,19 +33,12 @@ function mostrar()
 		}//validación número
 		numero=parseInt(numero);
 
-		if(contador==0)//numeros pares anda mal
+		if((numero%2)==0)//numeros pares
 		{
-			numerosPares=numero;
-			numerosImpares=numero;
-		}else
+			numerosPares=numerosPares+1;
+		}else//numeros impares
 		{
-			if(numero%2==0)//numeros impares anda mal
-			{
-				numerosPares=numerosPares+1;
-			}else
-			{
-				numerosImpares=numerosImpares+1;
-			}
+			numerosImpares=numerosImpares+1;
 		}
 
 		if (numero==0)//ceros
@@ -72,10 +67,13 @@ function mostrar()
 			{
 				maximo=numero;
 				letraMaximo=letra;
-			}else//minimo anda mal
+			}else
 			{
-				minimo=numero;
-				letraMinimo=letra;
+				if(numero<minimo)
+				{
+					minimo=numero;
+					letraMinimo=letra;
+				}//está bien o tengo que hacer otro else
 			}
 		}
 
