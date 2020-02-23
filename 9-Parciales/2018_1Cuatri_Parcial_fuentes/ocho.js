@@ -3,6 +3,7 @@ function mostrar()
 	var letra;
 	var numero;
 	var contador;
+	var contadorPositivos;
 	var respuesta;
 	var numerosPares;
 	var numerosImpares;
@@ -19,6 +20,7 @@ function mostrar()
 	ceros=0;
 	sumaNegativos=0;
 	acumuladorPositivos=0;
+	contadorPositivos=0;
 	numerosPares=0;
 	numerosImpares=0;
 	respuesta="si";
@@ -52,6 +54,7 @@ function mostrar()
 			}else
 			{
 				acumuladorPositivos=acumuladorPositivos+numero;
+				contadorPositivos=contadorPositivos+1;
 			}
 		}
 
@@ -82,7 +85,7 @@ function mostrar()
 		contador=contador+1;
 	}
 
-	promedio=acumuladorPositivos/contador;
+	promedio=acumuladorPositivos/contadorPositivos;
 
 	document.write("La cantidad de números pares es de "+numerosPares);
 	document.write("<br>La cantidad de números impares es de "+numerosImpares);
