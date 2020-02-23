@@ -28,16 +28,16 @@ function mostrar()
 		while(isNaN(numero)||numero<-100||numero>100)
 		{
 			numero=prompt("Reingrese número");
-		}
+		}//validación número
 		numero=parseInt(numero);
 
-		if(contador==0)
+		if(contador==0)//numeros pares anda mal
 		{
 			numerosPares=numero;
 			numerosImpares=numero;
 		}else
 		{
-			if(numero%2==0)
+			if(numero%2==0)//numeros impares anda mal
 			{
 				numerosPares=numerosPares+1;
 			}else
@@ -46,7 +46,7 @@ function mostrar()
 			}
 		}
 
-		if (numero==0)
+		if (numero==0)//ceros
 		{
 			ceros=ceros+1;
 		}else
@@ -68,11 +68,11 @@ function mostrar()
 			letraMinimo=letra;
 		}else
 		{
-			if(numero>maximo)
+			if(numero>maximo)//máximo
 			{
 				maximo=numero;
 				letraMaximo=letra;
-			}else
+			}else//minimo anda mal
 			{
 				minimo=numero;
 				letraMinimo=letra;
