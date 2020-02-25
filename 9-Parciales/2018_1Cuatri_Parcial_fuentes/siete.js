@@ -1,60 +1,62 @@
 function mostrar()
 {
 	var contador;
-	var notas;
+	var nota;
 	var acumuladorNotas;
 	var sexo;
-	var varonesConSeis;
 	var promedio;
 	var notaMasBaja;
-	var sexoNotaBaja;
+	var sexoNotaMasBaja;
+	var varonesAprobados;
 
 	contador=0;
 	acumuladorNotas=0;
-	varonesConSeis=0;
+	varonesAprobados=0;
 
 	while(contador<5)
 	{
-		notas=prompt("Ingrese nota");
-		while(isNaN(notas)||notas<0||notas>10)
+		nota=prompt("Ingrese la nota");
+		while(isNaN(nota)||nota>10||nota<0)
 		{
-			notas=prompt("Reingrese nota");
+			nota=prompt("Reingrese nota");
 		}
-		notas=parseInt(notas);
-		acumuladorNotas=acumuladorNotas+notas;
+		nota=parseInt(nota);
+		acumuladorNotas=acumuladorNotas+nota;
 
-		sexo=prompt("Ingrese f o m")
+		sexo=prompt("Ingrese sexo del estudiante");
 		while(sexo!="f"&&sexo!="m")
 		{
-			sexo=prompt("Reingrese f o m");
+			sexo=prompt("Reingrese sexo");
 		}
-
-
-		if(sexo=="m"&&notas>5)
-		{
-			varonesConSeis=varonesConSeis+1;
-		}		
 
 		if(contador==0)
 		{
-			notaMasBaja=notas;
-			sexoNotaBaja=sexo;
+			notaMasBaja=nota;
+			sexoNotaMasBaja=sexo;
 		}else
 		{
-			if(notaMasBaja>notas)
+			if(nota<notaMasBaja)
 			{
-				notaMasBaja=notas;
-				sexoNotaBaja=sexo;
+				notaMasBaja=nota;
+				sexoNotaMasBaja=sexo;
 			}
 		}
 
-		contador=contador+1;
+		if(sexo=="m"&&nota>5)
+		{
+			varonesAprobados=varonesAprobados+1;
+		}
 
-	}//termina while contador
+
+		contador=contador+1;
+	}
 
 	promedio=acumuladorNotas/contador;
-	alert("El promedio de las notas es "+promedio);
-	alert("La cantidad de varones que aprobaron es de "+varonesConSeis);
-	alert("La nota más baja es "+notaMasBaja+" y la obtuvo "+sexoNotaBaja);
+	alert("El promedio de las notas es "+promedio+", la nota más baja fue un "+notaMasBaja+
+		  " y la obtuvo "+sexoNotaMasBaja+". La cantidad de varones aprobados fue de "+varonesAprobados);
+
+
+
 
 }
+

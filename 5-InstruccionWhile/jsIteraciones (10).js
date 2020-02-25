@@ -21,7 +21,6 @@ function mostrar()
 	numerosPares=0;
 	promedioPositivos=0;
 	promedioNegativos=0;
-	diferencia=0;
 	respuesta="si";
 	
 	while(respuesta!="no")
@@ -48,27 +47,22 @@ function mostrar()
 			numerosPares=numerosPares+1;
 		}
 		
+		
 		respuesta=prompt("¿Quiere seguir ingresando números?","Ingrese no para salir");	
 	}
 
-
-	promedioPositivos=positivos/contadorPositivos;
-	promedioNegativos=negativos/contadorNegativos;
 	diferencia=positivos-negativos;
+	promedioPositivos=positivos/contadorPositivos;
+	promedioNegativos=negativos/contadorNegativos;//toda esta parte va adentro o afuera del while
 
-	document.write("Suma de números positivos ingresados: ",positivos);
-	document.write("<br>Cantidad de positivos ingresados: ",contadorPositivos);
-	document.write("<br>Promedio de números positivos ingresados: ",promedioPositivos);
-	document.write("<br>Suma de números negativos ingresados: ",negativos);
-	document.write("<br>Cantidad de negativos ingresados: ",contadorNegativos);
-	document.write("<br>Promedio de números negativos: ",promedioNegativos);
-	document.write("<br>Cantidad de ceros ingresados: ",contadorCeros);
-	document.write("<br>Cantidad de números pares ingresados: ",numerosPares);
-	document.write("<br>Diferencia entre positivos y negativos: ",diferencia);
-
-
-
-
-
+	document.write("Suma de números positivos ingresados: " ,positivos,
+	<br>"Cantidad de positivos ingresados: ",contadorPositivos,
+	<br>"Promedio de números positivos ingresados: ",promedioPositivos,
+	<br>"Suma de números negativos ingresados: ",negativos,
+	<br>"Cantidad de negativos ingresados: ",contadorNegativos,
+	<br>"Promedio de números negativos: ",promedioNegativos,
+	<br>"Cantidad de ceros ingresados: ",contadorCeros,
+	<br>"Cantidad de números pares ingresados: ",numerosPares,
+	<br>"Diferencia entre positivos y negativos: ",diferencia);
 
 }//FIN DE LA FUNCIÓN

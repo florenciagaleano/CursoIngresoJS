@@ -1,7 +1,8 @@
 function mostrar()
 {
 	var hora;
-	
+	var mensaje;
+
 	hora=document.getElementById('laHora').value;
 	hora=parseInt(hora);
 	//el alert tendría que estar escrito una sola vez
@@ -14,7 +15,7 @@ function mostrar()
 		case 9:
 		case 10:
 		case 11:
-			alert("Es de mañana");
+			mensaje="Es de mañana";
 			break;
 		case 12:
 		case 13:
@@ -24,7 +25,7 @@ function mostrar()
 		case 17:
 		case 18:
 		case 19:
-			alert("Es de tarde");
+			mensaje="Es de tarde";
 			break;
 		case 20:
 		case 21:
@@ -38,18 +39,20 @@ function mostrar()
 		case 5:
 			if(hora<24&&hora>19)
 			{
-				alert("A dormir");
+				mensaje="A dormir";
 			}else
 			{
-				alert("Es de noche");
+				mensaje="Es de noche";
 			}
 			break;
 		default:
-			alert("Hora no válida");
+			mensaje="Hora no válida";
 			break;
 
 			//anda pero me parece que está mal lo de la hora so idk
 
 	}
+
+	alert(mensaje);
 
 }

@@ -1,35 +1,34 @@
 function mostrar()
 {
 	var contador;
+	var acumuladorPeso;
 	var marca;
 	var peso;
-	var acumuladorPeso;
 	var temperatura;
 	var temperaturasPares;
-	var pesoMasPesado;
-	var marcaMasPesada;
-	var productosCeroGrados;
-	var promedio;
+	var productosBajoCero;
+	var maximo;
 	var minimo;
+	var marcaMasPesada;
 	var respuesta;
 
 	contador=0;
-	acumuladorPeso=0;
+	acumulador=0;
 	temperaturasPares=0;
-	productosCeroGrados=0;
+	productosBajoCero=0;
 	respuesta="si";
-	
+
 	while(respuesta=="si")
 	{
-		marca=prompt("Ingrese marca del producto");
+		marca=prompt("Ingrese marca");
 
-		peso=prompt("Ingrese peso del producto");
-		while(isNaN(peso)||peso>100||peso<1)
+		peso=prompt("Ingrese peso");
+		while(isNaN(peso)||peso<1||peso>100)
 		{
 			peso=prompt("Reingrese peso");
 		}
 		peso=parseInt(peso);
-		acumuladorPeso=acumuladorPeso+peso;
+		acumulador=acumulador+peso;
 
 		temperatura=prompt("Ingrese temperatura");
 		while(isNaN(temperatura)||temperatura>30||temperatura<-30)
@@ -43,16 +42,21 @@ function mostrar()
 			temperaturasPares=temperaturasPares+1;
 		}
 
+		if(temperatura<0)
+		{
+			productosBajoCero=productosBajoCero+1;
+		}
+
 		if(contador==0)
 		{
-			pesoMasPesado=peso;
-			marcaMasPesada=marca;
+			maximo=peso;
 			minimo=peso;
+			marcaMasPesada=marca;
 		}else
 		{
-			if(peso>pesoMasPesado)
+			if(peso>maximo)
 			{
-				pesoMasPesado=peso;
+				maximo=peso;
 				marcaMasPesada=marca;
 			}
 			if(peso<minimo)
@@ -61,22 +65,17 @@ function mostrar()
 			}
 		}
 
-		if(temperatura<0)
-		{
-			productosCeroGrados=productosCeroGrados+1;
-		}
-
-
-		respuesta=prompt("¿Quiere seguir ingresadno números?","si");
 		contador=contador+1;
+		respuesta=prompt("¿Desea seguir ingresando productos?","si");
+
 	}
 
-	promedio=acumuladorPeso/contador;
-	document.write("Cantidad de temperaturas pares: "+temperaturasPares);
-	document.write("<br>Marca del producto más pesado: "+marcaMasPesada);
-	document.write("<br>Cantidad de productos que se conservan a menos de 0 grados: "+productosCeroGrados);
-	document.write("<br>El promedio del peso de los productos es: "+promedio);
-	document.write("<br>El peso máximo es "+pesoMasPesado+" y el mínimo es "+minimo);
+	promedio=acumulador/contador;
+	document.write("Cantidad de temperaturas pares: "+temperaturasPares+
+		"<br>Marca del producto más pesado: "+marcaMasPesada+"<br>Productos que se conservan bajo cero: "
+		+productosBajoCero+"<br>Promedio del peso: "+promedio+"<br>Peso máximo: "+
+		maximo+"<br>Peso mínimo: "+minimo);
+
 
 }
 /*Realizar el algoritmo que permita ingresar la marca del producto, el peso el cual
