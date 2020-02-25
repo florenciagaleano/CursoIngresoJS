@@ -89,7 +89,7 @@ function mostrar()
 		contador=contador+1;
 	}
 
-	promedioPositivos=acumuladorPositivos/contador;
+	promedioPositivos=acumuladorPositivos/contadorPositivos;
 	alert("La cantidad de números pares es de "+numerosPares+" y la cantidad de impares es de "+numerosImpares+
 		".La cantidad de ceros fue de "+ceros+". El promedio de los números positivos fue "+promedioPositivos+
 		". La suma de los negativos dio "+sumaNegativos+". El máximo ingresado fue "+maximo+" y su letra "+letraMaximo+
