@@ -42,7 +42,8 @@ function mostrar()
 				contadorCeros=contadorCeros+1;
 			}
 		}
-		if(numero%2==0)
+
+		if((numero%2)==0)
 		{
 			numerosPares=numerosPares+1;
 		}
@@ -56,13 +57,13 @@ function mostrar()
 	promedioNegativos=negativos/contadorNegativos;//toda esta parte va adentro o afuera del while
 
 	document.write("Suma de números positivos ingresados: " ,positivos,
-	<br>"Cantidad de positivos ingresados: ",contadorPositivos,
-	<br>"Promedio de números positivos ingresados: ",promedioPositivos,
-	<br>"Suma de números negativos ingresados: ",negativos,
-	<br>"Cantidad de negativos ingresados: ",contadorNegativos,
-	<br>"Promedio de números negativos: ",promedioNegativos,
-	<br>"Cantidad de ceros ingresados: ",contadorCeros,
-	<br>"Cantidad de números pares ingresados: ",numerosPares,
-	<br>"Diferencia entre positivos y negativos: ",diferencia);
+	"<br>Cantidad de positivos ingresados: ",contadorPositivos,
+	"<br>Promedio de números positivos ingresados: ",promedioPositivos,
+	"<br>Suma de números negativos ingresados: ",negativos,
+	"<br>Cantidad de negativos ingresados: ",contadorNegativos,
+	"<br>Promedio de números negativos: ",promedioNegativos,
+	"<br>Cantidad de ceros ingresados: ",contadorCeros,
+	"<br>Cantidad de números pares ingresados: ",numerosPares,
+	"<br>Diferencia entre positivos y negativos: ",diferencia);
 
 }//FIN DE LA FUNCIÓN
