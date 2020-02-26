@@ -45,6 +45,8 @@ function ComenzarIngreso ()
 	 	nacionalidad=prompt("Ingrese A si es argentino, E si es extranjero y N si está nacionalizado");
 	 }
 
+	 //hacer el switch
+
 	 document.getElementById('Edad').value=edad;
 	 document.getElementById('Sexo').value=sexo;
 	 document.getElementById('EstadoCivil').value=estadoCivil;

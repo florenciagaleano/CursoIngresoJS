@@ -6,4 +6,6 @@ function mostrar()
 	{
 		document.write("<br>Número: "+contador);
 	}
+
+	/*(contador=0 va aca;la  lógica que queremos que siga;contador ++)*/
 }
