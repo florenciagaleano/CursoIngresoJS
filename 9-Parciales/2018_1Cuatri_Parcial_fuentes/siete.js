@@ -29,7 +29,7 @@ function mostrar()
 			sexo=prompt("Reingrese sexo");
 		}
 
-		if(contador==0)
+		if(contador==1)
 		{
 			notaMasBaja=nota;
 			sexoNotaMasBaja=sexo;

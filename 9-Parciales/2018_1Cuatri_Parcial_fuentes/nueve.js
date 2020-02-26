@@ -47,7 +47,7 @@ function mostrar()
 			productosBajoCero=productosBajoCero+1;
 		}
 
-		if(contador==0)
+		if(contador==1)
 		{
 			maximo=peso;
 			minimo=peso;
