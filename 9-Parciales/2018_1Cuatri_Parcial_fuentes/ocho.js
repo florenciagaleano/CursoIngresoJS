@@ -56,7 +56,7 @@ function mostrar()
 				acumuladorPositivos=acumuladorPositivos+numero;
 				contadorPositivos=contadorPositivos+1;
 			}
-			if(numero<0)
+			if(numero<0)//va if o un else
 			{
 				sumaNegativos=sumaNegativos+numero;
 			}
