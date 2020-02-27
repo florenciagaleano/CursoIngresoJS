@@ -30,6 +30,7 @@ function ComenzarIngreso ()
 	 while(isNaN(estadoCivil)||estadoCivil>4||estadoCivil<1)//esto se parsea?
 	 {
 	 	estadoCivil=prompt("Ingrese 1(si es soltero), 2(si es casado), 3(si es divorciado) o 4(si es viudo).");
+	 	estadoCivil=parseInt(estadoCivil);
 	 }
 	 while (isNaN(sueldoBruto)||sueldoBruto<8000)
 	 {
@@ -38,14 +39,55 @@ function ComenzarIngreso ()
 	 }
 	 while(isNaN(legajo)||legajo<1000||legajo>9999)
 	 {
-	 	legajo=prompt("Ingrese legajo");//tengo que parsear esto?
+	 	legajo=prompt("Ingrese legajo");
+	 	legajo=parseInt(legajo);
 	 }
 	 while (nacionalidad!="A"&&nacionalidad!="E"&&nacionalidad!="N")
 	 {
 	 	nacionalidad=prompt("Ingrese A si es argentino, E si es extranjero y N si está nacionalizado");
 	 }
 
-	 //hacer el switch
+	 //Datos validados
+
+	 switch(sexo)
+	 {
+	 	case "F":
+	 			sexo="Mujer";
+	 			break;
+	 	case "M":
+	 			sexo="Hombre";
+	 			break;
+
+	 }
+
+	 switch(estadoCivil)
+	 {
+	 	case 1:
+	 		estadoCivil="Soltero";
+	 		break;
+	 	case 2:
+	 		estadoCivil="Casado";
+	 		break;
+	 	case 3:
+	 		estadoCivil="Divorcidado";
+	 		break;
+	 	case 4:
+	 			estadoCivil="Viudo";
+	 			break;
+	 }
+
+	 switch(nacionalidad)
+	 {
+	 	case "A":
+	 		nacionalidad="Argentino";
+	 		break;
+	 	case "E":
+	 		nacionalidad="Extranjero";
+	 		break;
+	 	case "N":
+	 		nacionalidad="Nacionalizado";
+	 		break;
+	 }
 
 	 document.getElementById('Edad').value=edad;
 	 document.getElementById('Sexo').value=sexo;
