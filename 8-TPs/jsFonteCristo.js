@@ -102,6 +102,13 @@ function VerificarPrimo()
  	}
 }
 
+function NumerosPrimos()
+{
+
+
+
+}
+
 
 
 
