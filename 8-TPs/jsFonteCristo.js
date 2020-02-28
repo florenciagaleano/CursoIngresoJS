@@ -104,11 +104,23 @@ function VerificarPrimo()
 
 function NumerosPrimos()
 {
-		
+	var numeroPositivo;
+	var contadorPrimos;
 
+
+	contador=0;
+	contadorPrimos=0;
+	numeroPositivo=document.getElementById('numero').value;//hacer la validación
+ 	numeroPositivo=parseInt(numeroPositivo);
+
+ 	for()
+ 	
+ 	
 
 
 }
+/*e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
+desde el número ingresado hasta el cero.*/
 
 
 
