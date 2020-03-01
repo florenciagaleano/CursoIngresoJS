@@ -5,7 +5,7 @@ function mostrar()
 	var contador;
 	var animal;
 	var peso;
-	var temperaturaHabitat;
+	var temperatura;
 	var contadorTemperaturasPares;
 	var maximoPeso;
 	var animalMasPesado;
@@ -40,11 +40,12 @@ function mostrar()
 
 		do
 		{
-			temperaturaHabitat=prompt("Ingrese temperatura del habitat del animal");
-			temperaturaHabitat=parseInt(temperaturaHabitat);
-		}while(isNaN(temperaturaHabitat)||temperaturaHabitat<-30||temperaturaHabitat>30);
+			temperatura=prompt("Ingrese temperatura del habitat del animal");
+			temperatura=parseInt(temperatura);
+		}while(isNaN(temperatura)||temperatura<-30||temperatura>30);
+		//VALIDACIONES LISTAS
 
-		if(temperaturaHabitat%2==0)
+		if(temperatura%2==0)
 		{
 			contadorTemperaturasPares++;
 		}//TEMPERATURAS PARES
@@ -53,34 +54,37 @@ function mostrar()
 		{
 			maximoPeso=peso;
 			animalMasPesado=animal;
-			temperaturaMasPesado=temperaturaHabitat;
+			temperaturaMasPesado=temperatura;
 		}else
 		{
 			if(peso>maximoPeso)
 			{
 				maximoPeso=peso;
 				animalMasPesado=animal;
-				temperaturaMasPesado=temperaturaHabitat;
+				temperaturaMasPesado=temperatura;
 			}
 		}//MAXIMO PESO
 
-		if(temperaturaHabitat<0)
+		if(temperatura<0)
 		{
 			contadorAnimalesBajoCero++;
-			pesoMinimoBajoCero=peso;
+		}//ANIMALES QUE VIVEN BAJO CERO
+
+		if(contadorAnimalesBajoCero==1)//como meto todo esto en un solo if
+		{
 			pesoMaximoBajoCero=peso;
+			pesoMinimoBajoCero=peso;
 		}else
 		{
-			if(peso<pesoMinimoBajoCero)//anda mal arreglarlo
+			if(temperatura<0&&peso>pesoMaximoBajoCero)
+			{
+				pesoMaximoBajoCero=peso;
+			}
+			if(temperatura<0&&peso<pesoMinimoBajoCero)
 			{
 				pesoMinimoBajoCero=peso;
 			}
-			if(peso>pesoMaximoBajoCero)
-			{
-				pesoMaximoBajoCero=peso;
-			}		
-		}			
-		//ANIMALES QUE VIVEN BAJO CERO
+		}//PESO MÁXIMO Y MÍNIMO BAJO CERO
 
 		respuesta=prompt("Desea seguir ingresando datos?","si");
 	}while(respuesta=="si");
